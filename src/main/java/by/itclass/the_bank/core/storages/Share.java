@@ -7,7 +7,7 @@ public class Share implements Valuable {
 
     public Share(String name, double value){
         if(name == null){
-            throw new IllegalArgumentException("Акция должна иметь имя");
+            throw new IllegalArgumentException("Акции должны иметь имя");
         }
         if (value <= 0){
             throw new IllegalArgumentException("Цена акции");

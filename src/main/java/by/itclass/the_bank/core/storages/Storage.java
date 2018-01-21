@@ -3,12 +3,12 @@ package by.itclass.the_bank.core.storages;
 import by.itclass.the_bank.core.accounts.Account;
 import by.itclass.the_bank.core.accounts.NotEnoughValuableException;
 
-public class DepositBox {
+public class Storage {
     private Valuable values;
     private int amount;
     private Account serviceAccount;
 
-    public DepositBox(Valuable values, Account serviceAccount){
+    public Storage(Valuable values, Account serviceAccount){
         if (values == null) {
             throw new NullPointerException("Необходимо указать непустое содержимое для ячейки");
         }
@@ -21,6 +21,14 @@ public class DepositBox {
 
     public Account getServiceAccount() {
         return serviceAccount;
+    }
+
+    public Valuable getValues() {
+        return values;
+    }
+
+    public int getAmount() {
+        return amount;
     }
 
     public void setServiceAccount(Account serviceAccount) {
